@@ -4,9 +4,9 @@
 <h1>Hey World</h1>
 
 <div>
-  Browse our {{ numberOfStarships }} different Starships.
+  Browse our {{ ships|length }} different Starships.
 
-  {% if numberOfStarships > 400 %}
+  {% if ships|length > 2 %}
   {# is this too many #}
     Plenty of ships
   {% endif %}
