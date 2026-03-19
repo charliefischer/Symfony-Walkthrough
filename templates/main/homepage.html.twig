@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% block title %}New Page Title Goes Here{% endblock%}
+<h1>Hey World</h1>
+
+<div>
+  Browse our {{ numberOfStarships }} different Starships.
+
+  {% if numberOfStarships > 400 %}
+  {# is this too many #}
+    Plenty of ships
+  {% endif %}
+</div>
+
+<div>
+  <table>
+  <tr>
+    <th>Name</th>
+    <td>{{selectedShip.name}}</td>
+  </tr>
+  <tr>
+    <th>Class</th>
+    <td>{{selectedShip.class|upper}}</td>
+  </tr>
+  <tr>
+    <th>Captain</th>
+    <td>{{selectedShip.captain}}</td>
+  </tr>
+  <tr>
+    <th>Status</th>
+    <td>{{selectedShip.status}}</td>
+  </tr>
+  </table>
+</div>
+{% endblock %}
