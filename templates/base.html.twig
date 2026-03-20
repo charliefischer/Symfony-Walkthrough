@@ -8,10 +8,11 @@
         {% endblock %}
 
         {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
-        <h1>Titke goes here</h1>
+        <h1 class="text-sm">Titke goes here</h1>
         {% block body %}{% endblock %}
     </body>
 </html>
