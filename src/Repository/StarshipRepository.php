@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Model\Starship;
+use App\Model\StarshipStatusEnum;
 use Psr\Log\LoggerInterface;
 
 class StarshipRepository
@@ -20,21 +21,21 @@ class StarshipRepository
         'Twigcelerator',
         'Rally',
         'Hans Moleman',
-        'Owned'
+        StarshipStatusEnum::COMPLETED,
       ),
       new Starship(
-        1,
+        2,
         'Twigcelerator2 ',
         'Indoor',
         'Gary',
-        'For Sale'
+        StarshipStatusEnum::IN_PROGRESS,
       ),
       new Starship(
-        1,
+        3,
         'Twigcelerator 3',
         'Snow',
         'Lee Sharp',
-        'Under Maintenance'
+        StarshipStatusEnum::WAITING,
       ),
     ];
   }

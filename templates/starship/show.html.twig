@@ -6,7 +6,7 @@
 <div>
   <table>
   <tr>
-    <th>Name</th>
+    <th><a href="{{path('app_homepage')}}">Name</a></th>
     <td>{{ship.name}}</td>
   </tr>
   <tr>
@@ -19,7 +19,11 @@
   </tr>
   <tr>
     <th>Status</th>
-    <td>{{ship.status}}</td>
+    <td>{{ship.statusString}}</td>
+  </tr>
+  <tr>
+    <th>Image</th>
+    <td><img src="{{ asset(ship.statusImageFilename)}}" class="h-32 w-32 object-contain" /></td>
   </tr>
   </table>
 </div>

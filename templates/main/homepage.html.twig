@@ -13,16 +13,22 @@
 </div>
 
 <div>
+  {{include('main/_shipStatus.html.twig')}}
+</div>
+
+<div>
   <table>
+  {% for ship in ships %}
   <tr>
     <th>Name</th>
     <td>
-    <a href="{{path('app_starship_show', {id: selectedShip.id})}}">
-    {{selectedShip.name}}
+    <a href="{{path('app_starship_show', {id: ship.id})}}">
+    {{ship.name}}
     </a>
     </td>
   </tr>
-  <img src="{{asset('images/queen_mandela.png')}}" />
+  {% endfor %}
   </table>
+  <img src="{{asset('images/queen_mandela.png')}}" />
 </div>
 {% endblock %}
